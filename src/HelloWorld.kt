@@ -5,4 +5,9 @@ fun main(args: Array<String>) {
     name.firstName = "UJJWAL"
     print("\n" + name.firstName)
     println(" ${name.lastName}")
+
+    val nameInJava = NameInJava()
+    nameInJava.firstName = "RAHUL"
+    nameInJava.lastName = "MAITY"
+    println("${nameInJava.firstName} ${nameInJava.lastName}")
 }

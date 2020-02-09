@@ -36,4 +36,19 @@ fun main(args: Array<String>) {
     else
         0
     println(result)
+
+    var str1: String = "Ujjwal"
+    var str2 = "ujjwal"
+    if (str1.equals(str2))
+        println("Same")
+    else
+        println("Not Same")
+    if (str1 == str2)
+        println("Same")
+    else
+        println("Not Same")
+    if (str1.equals(str2, true))
+        println("Same")
+    else
+        println("Not Same")
 }

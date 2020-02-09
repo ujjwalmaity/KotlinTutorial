@@ -86,4 +86,24 @@ fun main(args: Array<String>) {
         else -> "Give a proper input"
     }
     println(msg)
+
+    var num6 = 0
+    while (num6 < 10) {
+        print("$num6 \t")
+        num6++
+    }
+    println()
+    num6 = -1
+    do {
+        num6++
+        if (num6 == 10) {
+            println("b")
+            break
+        }
+        if (num6 % 2 != 0) {
+            print("c \t")
+            continue
+        }
+        print("$num6 \t")
+    } while (num6 < 15)
 }

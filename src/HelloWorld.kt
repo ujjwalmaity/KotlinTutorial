@@ -65,4 +65,12 @@ fun main(args: Array<String>) {
     name2 = null
     println(name2?.gender)
     println(name2?.gender?.length)
+
+    var num5 = 2
+    when (num5) {
+        1 -> println("One")
+        2 -> println("Two")
+        3 -> println("Three")
+        else -> println("Give a proper input")
+    }
 }

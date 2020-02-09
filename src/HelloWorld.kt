@@ -20,4 +20,13 @@ fun main(args: Array<String>) {
     println(num1 * num2)
     val div = num1 / num2
     println("$num1 / $num2 = $div")
+
+    var num3: Int = 5
+    var num4: Int = 10
+    var result: Int = 0
+    if (num3 > num4)
+        result = num3
+    else if (num4 > num3)
+        result = num4
+    println(result)
 }

@@ -29,4 +29,11 @@ fun main(args: Array<String>) {
     else if (num4 > num3)
         result = num4
     println(result)
+    result = if (num3 > num4)
+        num3
+    else if (num4 > num3)
+        num4
+    else
+        0
+    println(result)
 }

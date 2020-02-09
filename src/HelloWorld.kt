@@ -36,6 +36,12 @@ fun main(args: Array<String>) {
     else
         0
     println(result)
+    result = when {
+        num3 > num4 -> num3
+        num4 > num3 -> num4
+        else -> 0
+    }
+    println(result)
 
     var str1: String = "Ujjwal"
     var str2 = "ujjwal"
@@ -73,4 +79,11 @@ fun main(args: Array<String>) {
         3 -> println("Three")
         else -> println("Give a proper input")
     }
+    var msg = when (num5) {
+        1 -> "One"
+        2 -> "Two"
+        3 -> "Three"
+        else -> "Give a proper input"
+    }
+    println(msg)
 }

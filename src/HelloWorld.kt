@@ -51,4 +51,18 @@ fun main(args: Array<String>) {
         println("Same")
     else
         println("Not Same")
+
+    var str3 = null
+    println(str3)
+    var str4: Nothing? = null
+    println(str4)
+    var str5: String? = null
+    println(str5)
+    var name1 = Name();
+    println(name1.gender)
+    println(name1.gender?.length)
+    var name2: Name? = Name()
+    name2 = null
+    println(name2?.gender)
+    println(name2?.gender?.length)
 }

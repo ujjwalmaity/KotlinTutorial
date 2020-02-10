@@ -106,4 +106,37 @@ fun main(args: Array<String>) {
         }
         print("$num6 \t")
     } while (num6 < 15)
+
+    var num7 = 1..16
+    for (a in num7)
+        print("$a \t")
+    println()
+    for (a in num7 step 2)
+        print("$a \t")
+    println()
+    var num8 = 16 downTo 1
+    for (a in num8)
+        print("$a \t")
+    println()
+    num8 = 10.downTo(0)
+    println(num8.count())
+    var num9 = 1 until 11
+    for (a in num9)
+        print("$a \t")
+    println()
+    for (a in num9.reversed())
+        print("$a \t")
+    println()
+    var char1 = 'A'..'z'
+    for (a in char1)
+        print("$a \t")
+    println()
+    print("Prime No: ")
+    outer@ for (n in 2..15) {
+        for (d in 2 until n) {
+            if (n % d == 0) continue@outer
+        }
+        print("$n \t")
+    }
+    println()
 }

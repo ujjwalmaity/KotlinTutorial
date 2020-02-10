@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main(args: Array<String>) {
     print("Hello World!")
 
@@ -138,5 +140,19 @@ fun main(args: Array<String>) {
         }
         print("$n \t")
     }
+    println()
+
+    var num10 = listOf(1, 2, 3, 4)
+    for (i in num10)
+        print("$i \t")
+    println()
+    for ((i, e) in num10.withIndex())
+        print("$i : $e\t")
+    println()
+    var map = TreeMap<String, Int>()
+    map["ujjwal"] = 22
+    map["rahul"] = 23
+    for ((n, a) in map)
+        print("$n = $a \t")
     println()
 }

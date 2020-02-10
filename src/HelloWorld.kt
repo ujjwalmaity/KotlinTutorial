@@ -155,4 +155,24 @@ fun main(args: Array<String>) {
     for ((n, a) in map)
         print("$n = $a \t")
     println()
+
+    println(addFun1(5, 8))
+    println(addFun2(3, 2))
+    println(maxFun1(5, 8))
+    println(maxFun2(3, 2))
 }
+
+fun addFun1(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun addFun2(a: Int, b: Int): Int = a + b
+
+fun maxFun1(a: Int, b: Int): Int {
+    return if (a > b)
+        a
+    else
+        b
+}
+
+fun maxFun2(a: Int, b: Int): Int = if (a > b) a else b

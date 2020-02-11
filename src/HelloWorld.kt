@@ -1,5 +1,6 @@
 //@file:JvmName("Hello")
 
+import java.lang.NumberFormatException
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -172,6 +173,15 @@ fun main(args: Array<String>) {
     println(num11)
     num11 = str6.toInt()
     println(num11)
+
+    var str7: String = "4a"
+    var num12: Int = try {
+        str7.toInt()
+    } catch (e: NumberFormatException) {
+        -1
+    }
+    num12++
+    println(num12)
 }
 
 fun addFun1(a: Int, b: Int): Int {

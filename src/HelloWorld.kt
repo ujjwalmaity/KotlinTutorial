@@ -1,6 +1,7 @@
 //@file:JvmName("Hello")
 
 import java.lang.NumberFormatException
+import java.math.BigInteger
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -202,6 +203,8 @@ fun main(args: Array<String>) {
     a5.show()
 
     println(fact1(7))
+
+    println(fact2(BigInteger("70")))
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -235,4 +238,11 @@ fun fact1(num: Int): Int {
         1
     else
         num * fact1(num - 1)
+}
+
+fun fact2(num: BigInteger): BigInteger {
+    return if (num == BigInteger.ZERO)
+        BigInteger.ONE
+    else
+        num * fact2(num - BigInteger.ONE)
 }

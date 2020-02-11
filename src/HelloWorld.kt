@@ -205,6 +205,8 @@ fun main(args: Array<String>) {
     println(fact1(7))
 
     println(fact2(BigInteger("70")))
+
+    println(fact3(BigInteger("70000"), BigInteger.ONE))
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -245,4 +247,11 @@ fun fact2(num: BigInteger): BigInteger {
         BigInteger.ONE
     else
         num * fact2(num - BigInteger.ONE)
+}
+
+tailrec fun fact3(num: BigInteger, result: BigInteger): BigInteger {
+    return if (num == BigInteger.ZERO)
+        result
+    else
+        fact3(num - BigInteger.ONE, num * result)
 }

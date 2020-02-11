@@ -162,6 +162,10 @@ fun main(args: Array<String>) {
     println(addFun2(3, 2))
     println(maxFun1(5, 8))
     println(maxFun2(3, 2))
+
+    println(calAmount(50))
+    println(calAmount(50, 0.03))
+    println(calAmount(interest = 0.03, amt = 50))
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -178,3 +182,8 @@ fun maxFun1(a: Int, b: Int): Int {
 }
 
 fun maxFun2(a: Int, b: Int): Int = if (a > b) a else b
+
+@JvmOverloads
+fun calAmount(amt: Int, interest: Double = 0.04): Int {
+    return (amt + amt * interest).toInt()
+}

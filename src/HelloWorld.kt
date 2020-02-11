@@ -182,6 +182,15 @@ fun main(args: Array<String>) {
     }
     num12++
     println(num12)
+
+    var a1 = Alien()
+    a1.skills = "Java"
+    a1.show()
+    var a2 = Alien()
+    a2.skills = "SQL"
+    a2.show()
+    var a3 = a1.plus(a2)
+    a3.show()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -202,4 +211,10 @@ fun maxFun2(a: Int, b: Int): Int = if (a > b) a else b
 @JvmOverloads
 fun calAmount(amt: Int, interest: Double = 0.04): Int {
     return (amt + amt * interest).toInt()
+}
+
+fun Alien.plus(a: Alien): Alien {
+    var newAlien = Alien()
+    newAlien.skills = this.skills + " " + a.skills;
+    return newAlien
 }

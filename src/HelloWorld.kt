@@ -200,6 +200,8 @@ fun main(args: Array<String>) {
     // https://kotlinlang.org/docs/reference/operator-overloading.html
     var a5 = a1 + a2
     a5.show()
+
+    println(fact1(7))
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -226,4 +228,11 @@ infix operator fun Alien.plus(a: Alien): Alien {
     var newAlien = Alien()
     newAlien.skills = this.skills + " " + a.skills;
     return newAlien
+}
+
+fun fact1(num: Int): Int {
+    return if (num == 0)
+        1
+    else
+        num * fact1(num - 1)
 }

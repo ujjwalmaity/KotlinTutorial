@@ -166,6 +166,12 @@ fun main(args: Array<String>) {
     println(calAmount(50))
     println(calAmount(50, 0.03))
     println(calAmount(interest = 0.03, amt = 50))
+
+    var str6: String = "4"
+    var num11: Int = Integer.parseInt(str6)
+    println(num11)
+    num11 = str6.toInt()
+    println(num11)
 }
 
 fun addFun1(a: Int, b: Int): Int {

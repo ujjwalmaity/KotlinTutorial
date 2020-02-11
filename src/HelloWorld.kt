@@ -196,6 +196,10 @@ fun main(args: Array<String>) {
     // example of infix function - downTo, in
     var a4 = a1 plus a2
     a4.show()
+
+    // https://kotlinlang.org/docs/reference/operator-overloading.html
+    var a5 = a1 + a2
+    a5.show()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -218,7 +222,7 @@ fun calAmount(amt: Int, interest: Double = 0.04): Int {
     return (amt + amt * interest).toInt()
 }
 
-infix fun Alien.plus(a: Alien): Alien {
+infix operator fun Alien.plus(a: Alien): Alien {
     var newAlien = Alien()
     newAlien.skills = this.skills + " " + a.skills;
     return newAlien

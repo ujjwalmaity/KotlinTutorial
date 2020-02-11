@@ -191,6 +191,11 @@ fun main(args: Array<String>) {
     a2.show()
     var a3 = a1.plus(a2)
     a3.show()
+
+    // infix function takes one parameter
+    // example of infix function - downTo, in
+    var a4 = a1 plus a2
+    a4.show()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -213,7 +218,7 @@ fun calAmount(amt: Int, interest: Double = 0.04): Int {
     return (amt + amt * interest).toInt()
 }
 
-fun Alien.plus(a: Alien): Alien {
+infix fun Alien.plus(a: Alien): Alien {
     var newAlien = Alien()
     newAlien.skills = this.skills + " " + a.skills;
     return newAlien

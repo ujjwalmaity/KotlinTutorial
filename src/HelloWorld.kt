@@ -1,3 +1,5 @@
+//@file:JvmName("Hello")
+
 import java.util.*
 
 fun main(args: Array<String>) {

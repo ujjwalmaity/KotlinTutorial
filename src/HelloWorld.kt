@@ -207,6 +207,9 @@ fun main(args: Array<String>) {
     println(fact2(BigInteger("70")))
 
     println(fact3(BigInteger("70000"), BigInteger.ONE))
+
+    var ujjwal = Human("Ujjwal")
+    ujjwal.think()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -254,4 +257,15 @@ tailrec fun fact3(num: BigInteger, result: BigInteger): BigInteger {
         result
     else
         fact3(num - BigInteger.ONE, num * result)
+}
+
+//class Human public constructor(var n: String) {
+//class Human constructor(var n: String) {
+//class Human(var n: String = "Mr") {
+class Human(var n: String) {
+    var name: String = n
+
+    fun think() {
+        println("Kotlin is awesome.. $name")
+    }
 }

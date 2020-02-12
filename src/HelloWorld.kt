@@ -210,6 +210,9 @@ fun main(args: Array<String>) {
 
     var ujjwal = Human("Ujjwal")
     ujjwal.think()
+
+    var rahul = Human2("Rahul", 22)
+    rahul.think()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -272,5 +275,19 @@ class Human(var n: String) {
 
     fun think() {
         println("Kotlin is awesome.. $name")
+    }
+}
+
+class Human2(var n: String) {
+    var name: String = ""
+    var age: Int = 0
+
+    constructor(name: String, age: Int) : this(name) {
+        this.name = name
+        this.age = age
+    }
+
+    fun think() {
+        println("Kotlin is awesome.. $name : $age")
     }
 }

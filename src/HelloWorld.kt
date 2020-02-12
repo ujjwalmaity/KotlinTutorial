@@ -263,7 +263,12 @@ tailrec fun fact3(num: BigInteger, result: BigInteger): BigInteger {
 //class Human constructor(var n: String) {
 //class Human(var n: String = "Mr") {
 class Human(var n: String) {
-    var name: String = n
+    var name: String = ""
+
+    init {
+        name = n
+        println("Human is here...")
+    }
 
     fun think() {
         println("Kotlin is awesome.. $name")

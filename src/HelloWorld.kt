@@ -213,6 +213,11 @@ fun main(args: Array<String>) {
 
     var rahul = Human2("Rahul", 22)
     rahul.think()
+
+    val car = Car(4, 120.0)
+//    val car: MotorVehicle = Car(4, 120.0)
+    car.details()
+    println(car.drive())
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -289,5 +294,29 @@ class Human2(var n: String) {
 
     fun think() {
         println("Kotlin is awesome.. $name : $age")
+    }
+}
+
+open class MotorVehicle(val maxSpeed: Double, val horsePowers: Int) {
+    init {
+        println("In MotorVehicle.")
+    }
+
+    fun details() {
+        println("It is MotorVehicle.")
+    }
+
+    open fun drive(): String {
+        return "$horsePowers HP MotorVehicle driving at $maxSpeed MPH"
+    }
+}
+
+class Car(val seatCount: Int, maxSpeed: Double) : MotorVehicle(maxSpeed, 100) {
+    init {
+        println("In Car.")
+    }
+
+    override fun drive(): String {
+        return super.drive() + " with $seatCount seats"
     }
 }

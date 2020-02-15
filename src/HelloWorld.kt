@@ -222,6 +222,11 @@ fun main(args: Array<String>) {
     var mayank: Person = Doctor()
     mayank.talk()
     mayank.think()
+
+    var obj = C()
+    obj.show()
+    obj.display()
+    obj.abc()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -336,5 +341,35 @@ abstract class Person {
 class Doctor : Person() {
     override fun think() {
         println("Critical Thinking")
+    }
+}
+
+interface A {
+    fun show()
+
+    fun abc() {
+        println("A : abc")
+    }
+}
+
+interface B {
+    fun display()
+
+    fun abc() {
+        println("B : abc")
+    }
+}
+
+class C : A, B {
+    override fun show() {
+        println("C : show of A")
+    }
+
+    override fun display() {
+        println("C : display of B")
+    }
+
+    override fun abc() {
+        super<B>.abc()
     }
 }

@@ -218,6 +218,10 @@ fun main(args: Array<String>) {
 //    val car: MotorVehicle = Car(4, 120.0)
     car.details()
     println(car.drive())
+
+    var mayank: Person = Doctor()
+    mayank.talk()
+    mayank.think()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -318,5 +322,19 @@ class Car(val seatCount: Int, maxSpeed: Double) : MotorVehicle(maxSpeed, 100) {
 
     override fun drive(): String {
         return super.drive() + " with $seatCount seats"
+    }
+}
+
+abstract class Person {
+    abstract fun think()
+
+    fun talk() {
+        println("Talking...")
+    }
+}
+
+class Doctor : Person() {
+    override fun think() {
+        println("Critical Thinking")
     }
 }

@@ -253,6 +253,8 @@ fun main(args: Array<String>) {
         }
     }
     programmer.think()
+
+    D.show()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -424,4 +426,13 @@ object BookSelf {
 
 interface Human4 {
     fun think()
+}
+
+class D {
+    companion object {
+        @JvmStatic
+        fun show() {
+            println("Hello")
+        }
+    }
 }

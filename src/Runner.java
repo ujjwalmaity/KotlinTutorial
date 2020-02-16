@@ -16,6 +16,8 @@ public class Runner {
             }
         };
         programmer.think();
+
+        D.show();
     }
 }
 

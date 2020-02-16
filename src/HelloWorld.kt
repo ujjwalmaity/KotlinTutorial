@@ -255,6 +255,9 @@ fun main(args: Array<String>) {
     programmer.think()
 
     D.show()
+
+    var obj2 = E.create()
+    obj2.show()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -434,5 +437,15 @@ class D {
         fun show() {
             println("Hello")
         }
+    }
+}
+
+class E {
+    companion object {
+        fun create(): E = E()
+    }
+
+    fun show() {
+        println("In show")
     }
 }

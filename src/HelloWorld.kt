@@ -258,6 +258,9 @@ fun main(args: Array<String>) {
 
     var obj2 = E.create()
     obj2.show()
+
+    `in`()
+    System.`in`
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -448,4 +451,7 @@ class E {
     fun show() {
         println("In show")
     }
+}
+
+fun `in`() {
 }

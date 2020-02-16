@@ -292,6 +292,19 @@ fun main(args: Array<String>) {
     for (i in str8)
         print("$i ")
     println()
+
+    // Read only list
+    var values1 = listOf<Int>(8, 9, 4, 2)
+    println(values1.get(0))
+    println(values1.indexOf(9))
+
+    // Mutable list
+    var values2 = mutableListOf<Int>(8, 9, 4, 2)
+    values2.add(10)
+    values2.add(2, 3)
+    for (i in values2)
+        print("$i ")
+    println()
 }
 
 fun addFun1(a: Int, b: Int): Int {

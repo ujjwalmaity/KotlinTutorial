@@ -261,6 +261,12 @@ fun main(args: Array<String>) {
 
     `in`()
     System.`in`
+
+//    var sc = Scanner(System.`in`)
+//    var num = sc.nextInt()
+//    println(num)
+    var num13 = readLine()
+    println(num13)
 }
 
 fun addFun1(a: Int, b: Int): Int {

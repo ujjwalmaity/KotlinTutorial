@@ -267,6 +267,31 @@ fun main(args: Array<String>) {
 //    println(num)
     var num13 = readLine()
     println(num13)
+
+    var num14 = intArrayOf(10, 12, 14, 16)
+    num14[1] = 13
+    println(num14[1])
+    num14.set(1, 11)
+    println(num14.get(1))
+    for (i in num14)
+        print("$i ")
+    println()
+
+    var num15 = IntArray(4)
+    num15.set(0, 10)
+    num15.set(1, 13)
+    num15.set(2, 14)
+    num15.set(3, 16)
+
+    var str8 = arrayOfNulls<String>(5)
+    str8.set(0, "A")
+    str8.set(1, "B")
+    str8.set(2, "C")
+    str8.set(3, "D")
+    str8.set(4, "E")
+    for (i in str8)
+        print("$i ")
+    println()
 }
 
 fun addFun1(a: Int, b: Int): Int {

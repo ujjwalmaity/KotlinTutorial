@@ -305,6 +305,11 @@ fun main(args: Array<String>) {
     for (i in values2)
         print("$i ")
     println()
+
+    var books = listOf<Book>(Book("Java", 60), Book("Kotlin", 80))
+    for (book in books)
+        print("${book.name} ")
+    println()
 }
 
 fun addFun1(a: Int, b: Int): Int {

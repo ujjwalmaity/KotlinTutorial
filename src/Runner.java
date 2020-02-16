@@ -8,5 +8,17 @@ public class Runner {
         System.out.println(result);
         result = HelloWorldKt.calAmount(50);
         System.out.println(result);
+
+        Human3 programmer = new Human3() {
+            @Override
+            public void think() {
+                System.out.println("Think virtually....");
+            }
+        };
+        programmer.think();
     }
+}
+
+interface Human3 {
+    void think();
 }

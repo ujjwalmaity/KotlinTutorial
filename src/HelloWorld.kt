@@ -246,6 +246,13 @@ fun main(args: Array<String>) {
     BookSelf.books.add(Book("Sql", 40))
     BookSelf.books.add(Book("Kotlin", 80))
     BookSelf.showBooks()
+
+    var programmer: Human4 = object : Human4 {
+        override fun think() {
+            println("Think virtually....")
+        }
+    }
+    programmer.think()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -413,4 +420,8 @@ object BookSelf {
         for (i in books)
             println(i)
     }
+}
+
+interface Human4 {
+    fun think()
 }

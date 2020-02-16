@@ -227,6 +227,20 @@ fun main(args: Array<String>) {
     obj.show()
     obj.display()
     obj.abc()
+
+    var lap1 = Laptop("Lenovo", 2000)
+    var lap2 = Laptop("Lenovo", 2000)
+    var lap3 = Laptop("Mac", 2500)
+    println(lap1)
+    println(lap2)
+    println(lap3)
+    println(lap1 == lap2)
+    println(lap1.equals(lap2))
+    println(lap1 == lap3)
+    var lap4 = lap3.copy()
+    println(lap4)
+    var lap5 = lap4.copy(price = 3000)
+    println(lap5)
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -371,5 +385,16 @@ class C : A, B {
 
     override fun abc() {
         super<B>.abc()
+    }
+}
+
+/**
+ * 1. Every class needs a toString()
+ * 2. equals & hashCode
+ * 3. copy
+ */
+data class Laptop(val brand: String, val price: Int) {
+    fun show() {
+        println("Awesome machine...")
     }
 }

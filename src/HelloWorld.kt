@@ -241,6 +241,11 @@ fun main(args: Array<String>) {
     println(lap4)
     var lap5 = lap4.copy(price = 3000)
     println(lap5)
+
+    BookSelf.books.add(Book("Java", 50))
+    BookSelf.books.add(Book("Sql", 40))
+    BookSelf.books.add(Book("Kotlin", 80))
+    BookSelf.showBooks()
 }
 
 fun addFun1(a: Int, b: Int): Int {
@@ -396,5 +401,16 @@ class C : A, B {
 data class Laptop(val brand: String, val price: Int) {
     fun show() {
         println("Awesome machine...")
+    }
+}
+
+data class Book(var name: String, var price: Int)
+
+object BookSelf {
+    var books = arrayListOf<Book>()
+
+    fun showBooks() {
+        for (i in books)
+            println(i)
     }
 }

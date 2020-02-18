@@ -334,6 +334,15 @@ fun main(args: Array<String>) {
 
     values3.forEach(::print)
     println()
+
+    var values4 = listOf<Int>(8, 9, 4, 2, 11)
+    var evens = values4.filter { it % 2 == 0 }
+    var doubleEvens = evens.map { it * 2 }
+    doubleEvens.forEach { print("$it ") }
+    println()
+    var result2 = values4.filter { it % 2 == 0 }.map { it * 2 }
+    result2.forEach { print("$it ") }
+    println()
 }
 
 fun addFun1(a: Int, b: Int): Int {

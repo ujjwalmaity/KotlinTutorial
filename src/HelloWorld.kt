@@ -3,6 +3,7 @@
 import java.lang.NumberFormatException
 import java.math.BigInteger
 import java.util.*
+import java.util.function.Consumer
 
 fun main(args: Array<String>) {
     print("Hello World!")
@@ -309,6 +310,29 @@ fun main(args: Array<String>) {
     var books = listOf<Book>(Book("Java", 60), Book("Kotlin", 80))
     for (book in books)
         print("${book.name} ")
+    println()
+
+    var values3 = listOf<Int>(8, 9, 4, 2)
+
+    var consumer1 = object : Consumer<Int> {
+        override fun accept(t: Int) {
+            print("$t ")
+        }
+    }
+    values3.forEach(consumer1)
+    println()
+
+    var consumer2 = Consumer<Int> { t -> print("$t ") }
+    values3.forEach(consumer2)
+    println()
+
+    values3.forEach { t -> print("$t ") }
+    println()
+
+    values3.forEach { print("$it ") }
+    println()
+
+    values3.forEach(::print)
     println()
 }
 
